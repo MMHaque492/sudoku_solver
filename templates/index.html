@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Sudoku Master</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <div class="app-container">
+        <header>
+            <h1>🎲 Sudoku Mizan</h1>
+            <button id="themeToggle" class="icon-btn">🌙 Dark</button>
+        </header>
+
+        <div class="game-controls">
+            <div class="difficulty-group">
+                <button class="difficulty-btn" data-diff="easy">Easy</button>
+                <button class="difficulty-btn active" data-diff="medium">Medium</button>
+                <button class="difficulty-btn" data-diff="hard">Hard</button>
+                <button id="newGameBtn" class="primary-btn">🔄 New Game</button>
+            </div>
+            
+            <div class="stats-panel">
+                <div class="stat">Timer: <span id="timerDisplay">0</span> s</div>
+                <div class="stat">Moves: <span id="moveCounter">0</span></div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="undoBtn" class="action-btn">↩️ Undo</button>
+                <button id="redoBtn" class="action-btn">↪️ Redo</button>
+                <button id="noteModeBtn" class="action-btn">Notes OFF</button>
+                <button id="hintBtn" class="action-btn">💡 Hint</button>
+                <button id="autoSolveBtn" class="action-btn"> Auto-Solve</button>
+                <button id="saveGameBtn" class="action-btn">Save</button>
+                <button id="resumeGameBtn" class="action-btn">Resume</button>
+                <button id="leaderboardBtn" class="action-btn">🏆 Leaderboard</button>
+            </div>
+        </div>
+
+        <div class="board-container">
+            <div id="sudoku-grid" class="sudoku-grid"></div>
+        </div>
+
+        <div class="number-pad">
+            <div class="num-row">
+                <button data-num="1">1</button>
+                <button data-num="2">2</button>
+                <button data-num="3">3</button>
+                <button data-num="4">4</button>
+                <button data-num="5">5</button>
+                <button data-num="6">6</button>
+                <button data-num="7">7</button>
+                <button data-num="8">8</button>
+                <button data-num="9">9</button>
+                <button data-num="0" class="delete-btn">⌫</button>
+            </div>
+        </div>
+
+        <div id="messageToast" class="toast hidden">Message</div>
+    </div>
+
+    <!-- Leaderboard Modal -->
+    <div id="leaderboardModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>🏅 Leaderboard</h2>
+            <div class="leaderboard-diff-selector">
+                <button class="lb-diff-btn active" data-diff="easy">Easy</button>
+                <button class="lb-diff-btn" data-diff="medium">Medium</button>
+                <button class="lb-diff-btn" data-diff="hard">Hard</button>
+            </div>
+            <div id="leaderboardList" class="leaderboard-list">
+                <p>Select difficulty</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
