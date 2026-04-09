@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #f5f7fb;
+    background: #c4b178;
     color: #1e293b;
     transition: background 0.2s, color 0.2s;
     padding: 20px;
@@ -44,7 +44,7 @@ header {
 h1 {
     font-size: 1.8rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    background: linear-gradient(135deg, #795115, #8b5cf6);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -97,12 +97,12 @@ h1 {
 }
 
 .difficulty-btn.active {
-    background: #3b82f6;
+    background: #146669;
     color: white;
 }
 
 .primary-btn {
-    background: #10b981;
+    background: #389c7b;
     color: white;
 }
 
@@ -201,7 +201,7 @@ h1 {
 
 .cell.selected {
     background-color: #bfdbfe;
-    outline: 2px solid #2563eb;
+    outline: 2px solid #550202;
     z-index: 2;
 }
 
@@ -225,7 +225,7 @@ h1 {
 }
 
 .dark-mode .cell.given {
-    color: #93c5fd;
+    color: #93fdfd;
 }
 
 /* NOTES */
